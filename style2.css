@@ -103,8 +103,14 @@ section {
   /* pass */
 }
 
+.list {
+  list-style: none;
+  padding: 1vh 0;
+}
+
 .section-title {
   font-size: 2em;
+  /* justify-content: center; */
 }
 
 .hero {
@@ -170,11 +176,6 @@ nav {
   width: 85vw;
 
   gap: 4%;
-}
-
-.list {
-  list-style: none;
-  padding: 1vh 0;
 }
 
 .nav-item {
@@ -306,43 +307,53 @@ nav {
 /* Experience styling */
 
 .experience {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr 3fr 3fr;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
   /* place-items: center; */
   /* display: flex;
   flex-direction: column; */
   /* justify-content: space-around; */
-  height: 90vh;
+  height: 45vh;
   background-color: #0e443b;
   color: #8bdbc3;
 }
 
 #experience-title {
-  /* justify-self: start; */
-  grid-row: 1;
-  grid-column: 1 / -1;
+  justify-self: start;
+  color: #f7fcff;
+  /* grid-row: 1;
+  grid-column: 1 / -1; */
+}
+
+.work-experience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .job-entry {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  width: fit-content;
 }
 
 .experience-img {
-  max-width: 10vw;
+  width: 7rem;
   aspect-ratio: 1/1;
 }
 
 #gl-logo.experience-img {
-  grid-column: 1;
-  grid-row: 2;
+  grid-column: 2;
+  grid-row: 1;
 }
 
 #sju-logo.experience-img {
-  grid-column: 1;
-  grid-row: 3;
+  grid-column: 2;
+  grid-row: 2;
 }
 
 .job-details {
@@ -350,13 +361,13 @@ nav {
 }
 
 #gl-details.job-details {
-  grid-row: 2;
-  grid-column: 2;
+  grid-column: 3;
+  grid-row: 1;
 }
 
 #sju-details.job-details {
-  grid-row: 3;
-  grid-column: 2;
+  grid-column: 3;
+  grid-row: 2;
 }
 
 .job-header {
@@ -375,23 +386,63 @@ nav {
   font-size: 1rem;
   text-wrap: nowrap;
   margin-top: 0.5rem;
-}
-
-.dash {
-  width: 100%;
-  height: 2px;
-  color: #fff;
+  color: #cad9e3;
 }
 
 /* Technologies Styling */
 /* need a better standardized naming convention */
 
 .tech-stack {
-  background-color: black;
+  background-color: #042128;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 45vh;
 }
+
+#tech-stack-title {
+  color: #8bdbc3;
+}
+
 .tech-imgs {
   aspect-ratio: 1/1;
-  max-width: 25%;
+  width: 5vw;
+  margin-right: 1rem;
+}
+
+.black-logo {
+  /* changes the color of the svgs that are black */
+  filter: invert(91%) sepia(26%) saturate(484%) hue-rotate(185deg)
+    brightness(106%) contrast(103%);
+  padding: 4%;
+}
+
+.tech-list {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 1rem;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  max-height: 50vh;
+  font-size: 1.5rem;
+
+  /* for disabling right clicking and dragging
+  !should use on all images */
+  pointer-events: none;
+  user-select: none;
+
+  color: #c8b599;
+}
+
+.technology {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* gap: 1rem; */
+  margin-right: 1.5rem;
+  font-weight: bold;
 }
 
 /* Education Styling */
@@ -412,6 +463,9 @@ introduction background green           #2b522d
 styling square green                    #266a56
 orange                                  #f0b971
 white                                   #f7fcff
+soft white                              #cad9e3
+experience background                   #0e443b
+tech stack background                   #042128
  
 
 
