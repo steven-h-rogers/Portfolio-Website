@@ -207,7 +207,8 @@ nav {
 .introduction {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  margin: auto 0;
+  justify-content: center;
   align-items: center;
   /* display: grid;
   grid-template-columns: 1fr;
@@ -219,7 +220,7 @@ nav {
   min-height: 0;
   height: 100%;
   /* padding-top: 20%; */
-  padding: 5vh 5vw;
+  /* padding: 5vh 5vw; */
   background-color: #2b522d;
   /* padding: 13em; */
   /* padding-top: 10vh; */
@@ -229,6 +230,8 @@ nav {
   z-index: 0;
 }
 
+.hero {
+}
 #portrait-container {
   position: relative;
   display: flex;
@@ -236,8 +239,8 @@ nav {
   justify-content: flex-end;
   align-items: center;
   /* width: 100%; */
-  min-width: none;
-  max-width: 50vw;
+  /* min-width: none; */
+  max-width: 50%;
   aspect-ratio: 1/1;
   background-color: #266a56;
   box-shadow: 0px 0px 10px 5px #1b2c1c99;
@@ -279,8 +282,8 @@ nav {
 
 .personal-info {
   position: relative;
-  min-width: none;
-  max-width: 50vw;
+  /* min-width: none; */
+  max-width: 100%;
   background-color: #1b2c1c99;
   padding: 10px 15px;
   flex-shrink: 1;
@@ -288,8 +291,8 @@ nav {
 }
 
 #name-text {
-  font-size: clamp(none, 5vw, 4rem);
-  text-wrap: pretty;
+  font-size: clamp(none, 4vw, 4rem);
+  text-wrap: nowrap;
   color: #f7fcff;
   left: 0;
   /* might not work in every browser */
@@ -480,6 +483,9 @@ nav {
 .education-img {
   aspect-ratio: 1/1;
   max-width: 25%;
+}
+
+@media {
 }
 
 /* color pallette
