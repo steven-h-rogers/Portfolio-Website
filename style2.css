@@ -102,6 +102,11 @@ section {
 
   /* pass */
 }
+
+.section-title {
+  font-size: 2em;
+}
+
 .hero {
   height: 90vh;
 
@@ -302,9 +307,10 @@ nav {
 
 .experience {
   flex-direction: column;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   height: 90vh;
   background-color: #0e443b;
+  color: #8bdbc3;
 }
 
 .job-entry {
@@ -316,6 +322,23 @@ nav {
 .experience-img {
   max-width: 10vw;
   aspect-ratio: 1/1;
+}
+
+.job-details {
+}
+
+.job-header {
+  text-wrap: nowrap;
+  font-size: 1.5em;
+}
+
+.job-title {
+  text-wrap: nowrap;
+  color: #f0b971;
+}
+
+.job-details .date {
+  text-wrap: nowrap;
 }
 
 .dash {
