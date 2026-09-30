@@ -103,6 +103,11 @@ section {
   /* pass */
 }
 
+img {
+  pointer-events: none;
+  user-select: none;
+}
+
 .list {
   list-style: none;
   padding: 1vh 0;
@@ -198,6 +203,7 @@ nav {
   color: #ce5fec;
 }
 
+/* !consider not having nameplate and portrait be flexible and remove gap between them */
 .introduction {
   display: flex;
   flex-direction: column;
@@ -321,7 +327,9 @@ nav {
 }
 
 #experience-title {
-  justify-self: start;
+  /* justify-self: center;   */
+  margin: 0 auto;
+  /* margin-left: 15%; */
   color: #f7fcff;
   /* grid-row: 1;
   grid-column: 1 / -1; */
@@ -329,10 +337,16 @@ nav {
 
 .work-experience-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 2fr 2fr 1fr;
   grid-template-rows: 1fr 1fr;
+  width: 100%;
+  height: 100%;
   align-items: center;
   gap: 1.5rem;
+}
+
+.align-right {
+  justify-self: right;
 }
 
 .job-entry {
@@ -342,7 +356,8 @@ nav {
 }
 
 .experience-img {
-  width: 7rem;
+  max-width: 7rem;
+  min-width: none;
   aspect-ratio: 1/1;
 }
 
@@ -361,11 +376,27 @@ nav {
 }
 
 #gl-details.job-details {
-  grid-column: 3;
+  grid-column: 4;
   grid-row: 1;
 }
 
 #sju-details.job-details {
+  grid-column: 4;
+  grid-row: 2;
+}
+
+.dash {
+  background-color: none;
+  height: 0.1rem;
+  border-bottom: 0.15em dotted #cad9e3;
+}
+
+#gl-dash.dash {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+#sju-dash.dash {
   grid-column: 3;
   grid-row: 2;
 }
@@ -427,11 +458,6 @@ nav {
   flex-wrap: wrap;
   max-height: 50vh;
   font-size: 1.5rem;
-
-  /* for disabling right clicking and dragging
-  !should use on all images */
-  pointer-events: none;
-  user-select: none;
 
   color: #c8b599;
 }
