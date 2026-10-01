@@ -133,6 +133,8 @@ img {
   grid-template-columns: minmax(400px, 1fr);
   grid-auto-rows: minmax(100px, auto);
 
+  /* ! should leave this commented out to promote mobile-first development
+  but can uncomment to show desktop format */
   width: 85vw;
 }
 
@@ -158,6 +160,9 @@ nav {
   /* justify-content: center; */
   /* gap: 1%; */
   /* height: auto; */
+
+  /* !should leave this commented out to promote mobile-first development
+  but can uncomment to show desktop format */
   width: 85vw;
   height: 10vh;
 
@@ -477,7 +482,7 @@ nav {
 /* Education Styling */
 
 .education {
-  background-color: black;
+  background-color: #604f69;
 }
 
 .education-img {
