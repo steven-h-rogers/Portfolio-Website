@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,26 +7,26 @@
     <link rel="stylesheet" href="style2.css" />
   </head>
   <body>
-        <nav>
-          <ul class="list" id="nav-list">
-            <li class="nav-item">
-              <img class="sr-logo" src="imgs/Slogo_white.png" alt="SR Logo" />
-            </li>
-            <li class="nav-item"><a href="#">Home</a></li>
-            <li class="nav-item">
-              <a href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a href="#">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a href="#">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a href="#">Download Resume</a>
-            </li>
-          </ul>
-        </nav>
+    <nav>
+      <ul class="list" id="nav-list">
+        <li class="nav-item">
+          <img class="sr-logo" src="imgs/Slogo_white.png" alt="SR Logo" />
+        </li>
+        <li class="nav-item"><a href="#">Home</a></li>
+        <li class="nav-item">
+          <a href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a href="#">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a href="#">Download Resume</a>
+        </li>
+      </ul>
+    </nav>
     <div id="page-format-container">
       <header class="hero">
         <section class="introduction">
@@ -43,35 +43,52 @@
             <p id="title-text">Python Developer</p>
             <p id="location-text">New York</p>
           </div>
+        </section>
       </header>
+
+      <!-- !should add an about section here -->
+      <!-- 
+      content: 
+      I am a New York based Python Developer who is primarily interested in AI.
+      Mainly, I use Python, FastAPI, and AWS though I enjoy learning new technologies frequently.
+      Both backend development and artificial intelligence are domains that excite me.
+      Aside from IT, I enjoy making art, music, and gaming.
+      I am currently looking for both full-time and contract work on location, hybrid, or remote.
+      -->
 
       <section class="experience">
         <h2 class="section-title" id="experience-title">Experience</h2>
 
         <div class="work-experience-grid">
           <!-- <ul class="work-list"> -->
-            <!-- <li class="job-entry"> -->
-              <img  class="experience-img align-right" id="gl-logo" src="imgs/globallogicsquare.png" alt="GlobalLogic Logo" />
-              <div class="dash" id="gl-dash"></div>
-              <div class="job-details" id="gl-details">
-                <h3 class="job-header">GlobalLogic</h3>
-                <p class="job-title">Python Developer</p>
-                <p class="date">Mar 2024 - Feb 2026</p>
-              </div>
-            <!-- </li> -->
-            <!-- <li class="job-entry"> -->
-              <img
-              class="experience-img align-right" id="sju-logo"
-              src="imgs/stjohnsprofileHD.webp"
-                alt="St. John's University Logo"
-              />
-              <div class="dash" id="sju-dash"></div>
-              <div class="job-details" id="sju-details">
-                <h3 class="job-header">St. John's University</h3>
-                <p class="job-title">Data Analyst</p>
-                <p class="date">Feb 2022 - May 2023</p>
-              </div>
-            <!-- </li> -->
+          <!-- <li class="job-entry"> -->
+          <img
+            class="experience-img align-right"
+            id="gl-logo"
+            src="imgs/globallogicsquare.png"
+            alt="GlobalLogic Logo"
+          />
+          <div class="dash" id="gl-dash"></div>
+          <div class="job-details" id="gl-details">
+            <h3 class="job-header">GlobalLogic</h3>
+            <p class="job-title">Python Developer</p>
+            <p class="date">Mar 2024 - Feb 2026</p>
+          </div>
+          <!-- </li> -->
+          <!-- <li class="job-entry"> -->
+          <img
+            class="experience-img align-right"
+            id="sju-logo"
+            src="imgs/stjohnsprofileHD.webp"
+            alt="St. John's University Logo"
+          />
+          <div class="dash" id="sju-dash"></div>
+          <div class="job-details" id="sju-details">
+            <h3 class="job-header">St. John's University</h3>
+            <p class="job-title">Data Analyst</p>
+            <p class="date">Feb 2022 - May 2023</p>
+          </div>
+          <!-- </li> -->
           <!-- </ul> -->
         </div>
       </section>
@@ -103,13 +120,28 @@
             />JavaScript
           </li>
           <li class="technology">
-            <img class="tech-imgs black-logo" id="mysql-logo" src="imgs/mysql (1).svg" alt="MySQL Logo" />MySQL
+            <img
+              class="tech-imgs black-logo"
+              id="mysql-logo"
+              src="imgs/mysql (1).svg"
+              alt="MySQL Logo"
+            />MySQL
           </li>
           <li class="technology">
-            <img class="tech-imgs black-logo" id="fastapi-logo" src="imgs/fastapi (1).svg" alt="FastAPI Logo" />FastAPI
+            <img
+              class="tech-imgs black-logo"
+              id="fastapi-logo"
+              src="imgs/fastapi (1).svg"
+              alt="FastAPI Logo"
+            />FastAPI
           </li>
           <li class="technology">
-            <img class="tech-imgs black-logo" id="flask-logo" src="imgs/flask.svg" alt="Flask Logo" />Flask
+            <img
+              class="tech-imgs black-logo"
+              id="flask-logo"
+              src="imgs/flask.svg"
+              alt="Flask Logo"
+            />Flask
           </li>
           <li class="technology">
             <img
@@ -188,6 +220,10 @@
           </li>
         </ul>
       </section>
+      <!-- !need a contact section -->
+      <!-- list github, linkedIn, email, phone number
+        create a lambda function that emails me using ses and cloudflare email routing
+        where people can email me messages from portfolio -->
     </div>
   </body>
 </html>
