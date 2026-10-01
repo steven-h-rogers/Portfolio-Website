@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,54 +9,72 @@
   <body>
     <nav>
       <ul class="list" id="nav-list">
+        <!-- this should be an svg but i don't have access to illustrator anymore -->
+        <img
+          class="sr-logo black-logo"
+          src="imgs/Slogo_black.svg"
+          alt="SR Logo"
+        />
+        <!-- <li class="nav-item">
+        </li> -->
+        <li class="nav-item"><a id="home-link" href="#">Home</a></li>
         <li class="nav-item">
-          <img class="sr-logo" src="imgs/Slogo_white.png" alt="SR Logo" />
+          <a id="about-link" href="#">About</a>
         </li>
-        <li class="nav-item"><a href="#">Home</a></li>
         <li class="nav-item">
-          <a href="#">About</a>
+          <a id="projects-link" href="#">Projects</a>
         </li>
         <li class="nav-item">
-          <a href="#">Projects</a>
+          <a id="contact-link" href="#">Contact</a>
         </li>
         <li class="nav-item">
-          <a href="#">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a href="#">Download Resume</a>
+          <a id="download-resume-link" href="#">Download Resume</a>
         </li>
       </ul>
     </nav>
     <div id="page-format-container">
+      <!-- *INTRODUCTION SECTION -->
       <header class="hero">
         <section class="introduction">
-          <!--use before and after for squares-->
-          <div id="portrait-container">
-            <img
-              class="portrait-img"
-              src="imgs/Headshot_AI.png"
-              alt="Headshot of Myself"
-            />
-          </div>
-          <div class="personal-info">
-            <h2 id="name-text">Steven Rogers</h2>
-            <p id="title-text">Python Developer</p>
-            <p id="location-text">New York</p>
+          <div class="portrait-and-nameplate-container">
+            <div id="portrait-container">
+              <img
+                class="portrait-img"
+                src="imgs/Headshot_AI.png"
+                alt="Headshot of Myself"
+              />
+            </div>
+            <div class="personal-info">
+              <div class="nameplate">
+                <h2 id="name-text">Steven Rogers</h2>
+                <p id="title-text">Python Developer</p>
+                <p id="location-text">New York</p>
+              </div>
+            </div>
           </div>
         </section>
       </header>
 
-      <!-- !should add an about section here -->
-      <!-- 
-      content: 
-      I am a New York based Python Developer who is primarily interested in AI.
-      Mainly, I use Python, FastAPI, and AWS though I enjoy learning new technologies frequently.
-      Both backend development and artificial intelligence are domains that excite me.
-      Aside from IT, I enjoy making art, music, and gaming.
-      I am currently looking for both full-time and contract work on location, hybrid, or remote.
-      -->
+      <!-- *ABOUT SECTION -->
+      <section class="about half-section">
+        <h2 class="section-title" id="about-title">About</h2>
+        <div class="about-text">
+          <p id="about-paragraph">
+            I am a New York based Python Developer who is primarily interested
+            in AI. Mainly, I use Python, FastAPI, and AWS though I enjoy
+            learning new technologies frequently. Both backend development and
+            artificial intelligence are domains that excite me. Aside from IT, I
+            enjoy making art, music, and gaming.
+          </p>
+          <p id="work-statement">
+            I am currently looking for both full-time and contract work on
+            location, hybrid, or remote.
+          </p>
+        </div>
+      </section>
 
-      <section class="experience">
+      <!-- *EXPERIENCE SECTION -->
+      <section class="experience half-section">
         <h2 class="section-title" id="experience-title">Experience</h2>
 
         <div class="work-experience-grid">
@@ -92,7 +110,9 @@
           <!-- </ul> -->
         </div>
       </section>
-      <section class="tech-stack">
+
+      <!-- *TECH STACK SECTION -->
+      <section class="tech-stack half-section">
         <h2 class="section-title" id="tech-stack-title">Tech Stack</h2>
         <ul class="list tech-list">
           <li class="technology">
@@ -193,37 +213,47 @@
           </li>
         </ul>
       </section>
-      <section class="education" id="education-title">
+
+      <!-- *EDUCATION SECTION -->
+      <section class="education half-section" id="education-title">
         <h2 class="section-title">Education</h2>
-        <ul class="education-list">
-          <li class="education-entry">
-            <img
-              class="education-img"
-              src="imgs/stjohnsprofileHD.webp"
-              alt="St. John's University Logo"
-            />
-            <h3 class="sju-header">St. John's University</h3>
-            <p class="degree-title">Master of Science</p>
-            <p class="date"></p>
-          </li>
-          <li class="education-entry">
-            <img
-              class="education-img"
-              src="imgs/stjohnsprofileHD.webp"
-              alt="St. John's University Logo"
-            />
-            <h3 class="sju-header">St. John's University</h3>
-            <p class="degree-title">Bachelor of Science</p>
-            <p id="minor">Minor in Fine Art</p>
-            <p class="date"></p>
-            <p id="magna">Magna Cum Laude</p>
-          </li>
-        </ul>
+
+        <!-- <ul class="education-list"> -->
+        <!-- <li class="education-entry"> -->
+        <div class="education-grid">
+          <img
+            class="education-img"
+            src="imgs/stjohnsprofileHD.webp"
+            alt="St. John's University Logo"
+          />
+          <h3 class="sju-header">St. John's University</h3>
+          <p class="degree-title">Master of Science</p>
+          <p class="date"></p>
+          <!-- </li> -->
+          <!-- <li class="education-entry"> -->
+          <img
+            class="education-img"
+            src="imgs/stjohnsprofileHD.webp"
+            alt="St. John's University Logo"
+          />
+          <h3 class="sju-header">St. John's University</h3>
+          <p class="degree-title">Bachelor of Science</p>
+          <p id="minor">Minor in Fine Art</p>
+          <p class="date"></p>
+          <p id="magna">Magna Cum Laude</p>
+          <!-- </li> -->
+          <!-- </ul> -->
+        </div>
       </section>
       <!-- !need a contact section -->
       <!-- list github, linkedIn, email, phone number
         create a lambda function that emails me using ses and cloudflare email routing
         where people can email me messages from portfolio -->
+      <footer class="quarter-section">
+        <section class="contact quarter-section">
+          <h2 class="section-title" id="contact-title">Contact me</h2>
+        </section>
+      </footer>
     </div>
   </body>
 </html>
