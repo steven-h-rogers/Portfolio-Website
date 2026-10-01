@@ -47,7 +47,7 @@ img {
 }
 
 .hero {
-  height: 90vh;
+  height: 90dvh;
 
   display: flex;
   flex-direction: column;
@@ -79,7 +79,7 @@ nav {
   /* !should leave this commented out to promote mobile-first development
   but can uncomment to show desktop format */
   /* width: 85vw; */
-  height: 10vh;
+  height: 10dvh;
 
   /* font-size: clamp(0.7rem, 2vw, 1.5rem); */
 
@@ -93,7 +93,7 @@ nav {
   flex-shrink: 1;
   /* flex-grow: 1; */
   /* aspect-ratio: 1/1; */
-  max-height: 7vh;
+  max-height: 7dvh;
 }
 
 #nav-list {
