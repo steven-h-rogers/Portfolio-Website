@@ -9,13 +9,11 @@
   <body>
     <nav>
       <ul class="list" id="nav-list">
-        <!-- this should be an svg but i don't have access to illustrator anymore -->
         <img class="sr-logo" src="imgs/Slogo_white.svg" alt="SR Logo" />
-        <!-- <li class="nav-item">
-        </li> -->
+
         <li class="nav-item"><a id="home-link" href="#">Home</a></li>
         <li class="nav-item">
-          <a id="about-link" href="#">About</a>
+          <a id="about-link" href="#about">About</a>
         </li>
         <li class="nav-item">
           <a id="projects-link" href="#">Projects</a>
@@ -52,7 +50,7 @@
       </header>
 
       <!-- *ABOUT SECTION -->
-      <section class="about half-section">
+      <section class="about half-section" id="about">
         <h2 class="section-title" id="about-title">About</h2>
         <div class="about-text">
           <p id="about-paragraph">
@@ -74,8 +72,6 @@
         <h2 class="section-title" id="experience-title">Experience</h2>
 
         <div class="work-experience-grid">
-          <!-- <ul class="work-list"> -->
-          <!-- <li class="job-entry"> -->
           <img
             class="experience-img align-right"
             id="gl-logo"
@@ -88,8 +84,7 @@
             <p class="job-title">Python Developer</p>
             <p class="date">Mar 2024 - Feb 2026</p>
           </div>
-          <!-- </li> -->
-          <!-- <li class="job-entry"> -->
+
           <img
             class="experience-img align-right"
             id="sju-logo"
@@ -102,8 +97,6 @@
             <p class="job-title">Data Analyst</p>
             <p class="date">Feb 2022 - May 2023</p>
           </div>
-          <!-- </li> -->
-          <!-- </ul> -->
         </div>
       </section>
 
@@ -211,34 +204,37 @@
       </section>
 
       <!-- *EDUCATION SECTION -->
-      <section class="education half-section" id="education-title">
-        <h2 class="section-title">Education</h2>
+      <section class="education half-section">
+        <h2 class="section-title" id="education-title">Education</h2>
 
-        <!-- <ul class="education-list"> -->
-        <!-- <li class="education-entry"> -->
         <div class="education-grid">
           <img
-            class="education-img"
+            class="education-img align-right"
+            id="masters-img"
             src="imgs/stjohnsprofileHD.webp"
             alt="St. John's University Logo"
           />
-          <h3 class="sju-header">St. John's University</h3>
-          <p class="degree-title">Master of Science</p>
-          <p class="date"></p>
-          <!-- </li> -->
-          <!-- <li class="education-entry"> -->
+          <div class="education-dash dash" id="masters-dash"></div>
+          <div class="education-text" id="masters-text">
+            <h3 class="education-header sju-header">St. John's University</h3>
+            <p class="education-degree degree-title">Master of Science</p>
+            <p class="education-date date">2022 - 2024</p>
+          </div>
+
           <img
-            class="education-img"
+            class="education-img align-right"
+            id="bachelors-img"
             src="imgs/stjohnsprofileHD.webp"
             alt="St. John's University Logo"
           />
-          <h3 class="sju-header">St. John's University</h3>
-          <p class="degree-title">Bachelor of Science</p>
-          <p id="minor">Minor in Fine Art</p>
-          <p class="date"></p>
-          <p id="magna">Magna Cum Laude</p>
-          <!-- </li> -->
-          <!-- </ul> -->
+          <div class="education-dash dash" id="bachelors-dash"></div>
+          <div class="education-text" id="bachelors-text">
+            <h3 class="education-header sju-header">St. John's University</h3>
+            <p class="education-degree degree-title">Bachelor of Science</p>
+            <p id="magna">Magna Cum Laude</p>
+            <p id="minor">Minor in Fine Art</p>
+            <p class="education-date date">2019 - 2023</p>
+          </div>
         </div>
       </section>
       <!-- !need a contact section -->
