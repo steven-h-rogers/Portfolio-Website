@@ -58,7 +58,8 @@ img {
   margin-right: auto;
   margin-top: 10vh;
   display: grid;
-  grid-template-columns: minmax(320px, 1fr);
+  min-width: none;
+  grid-template-columns: minmax(300px, 1fr);
   grid-auto-rows: minmax(100px, auto);
 
   /* ! should leave this commented out to promote mobile-first development
@@ -73,6 +74,8 @@ nav {
   right: 0;
   margin: auto;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-shrink: 0;
   flex-grow: 1;
 
@@ -93,7 +96,26 @@ nav {
   flex-shrink: 1;
   /* flex-grow: 1; */
   /* aspect-ratio: 1/1; */
+  pointer-events: all;
   max-height: 7dvh;
+}
+
+.bars {
+}
+
+.bars-button {
+  position: fixed;
+  left: 5%;
+  display: flex;
+  flex-shrink: 1;
+  flex-grow: 1;
+  height: 5dvh;
+  background: none;
+  border: none;
+}
+
+.bars-button:hover .bars {
+  background-color: purple;
 }
 
 #nav-list {
@@ -135,7 +157,7 @@ nav {
   justify-content: center;
   align-items: center;
 
-  padding: 10%;
+  padding: 2%;
   position: relative;
   min-height: 0;
   height: 100%;
@@ -157,7 +179,7 @@ nav {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  height: 75%;
+  max-height: 75%;
   /* width: 100%; */
   /* min-width: none; */
   /* max-width: 50%; */
@@ -207,9 +229,9 @@ nav {
   align-items: center;
   /* min-width: none; */
   max-width: 100%;
-  height: 25%;
+  max-height: 25%;
   background-color: #1b2c1c99;
-  padding: 10px 15px;
+  padding: 3% 5%;
   flex-shrink: 1;
   /* z-index: 1; */
 }
@@ -266,7 +288,7 @@ nav {
   color: #c9bbaa;
   /* background-color: #042128; */
   font-size: 1.25rem;
-  height: 100%;
+  max-height: 100%;
 }
 
 #about-paragraph {
@@ -299,10 +321,12 @@ nav {
 
 .work-experience-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr minmax(0, 2fr) 2fr 1fr;
+  grid-template-columns:
+    minmax(0, 2fr) 1fr minmax(0, 2fr) 2fr
+    minmax(0, 1fr);
   grid-template-rows: 1fr 1fr;
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   align-items: center;
   gap: 1.5rem;
 }
@@ -345,10 +369,10 @@ nav {
   /* font-size: 0; */
   /* line-height: 0; */
   background-color: none;
-  height: 0.1rem;
+  max-height: 0.1rem;
   border-bottom: 0.15em dotted #cad9e3;
-  width: 100%;
-  min-width: 0;
+  max-width: 100%;
+  min-width: none;
 }
 
 #gl-dash.dash {
@@ -397,7 +421,7 @@ nav {
 
 .tech-imgs {
   aspect-ratio: 1/1;
-  width: 5vw;
+  max-width: 5vw;
   margin-right: 1rem;
 }
 
@@ -407,7 +431,7 @@ nav {
     brightness(106%) contrast(103%);
 }
 
-.black-logo.tech-imgs {
+.simple-icons.tech-imgs {
   padding: 4%;
 }
 
@@ -450,10 +474,12 @@ nav {
 
 .education-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr minmax(0, 2fr) 2fr 1fr;
+  grid-template-columns:
+    minmax(0, 2fr) 1fr minmax(0, 2fr) 2fr
+    minmax(0, 1fr);
   grid-template-rows: 1fr 1fr;
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   align-items: center;
   gap: 1.5rem;
 }

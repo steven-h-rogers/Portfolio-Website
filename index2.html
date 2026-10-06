@@ -8,7 +8,23 @@
   </head>
   <body>
     <nav>
-      <ul class="list" id="nav-list">
+      <button class="bars-button">
+        <img
+          loading="eager"
+          class="bars"
+          src="imgs/bars-solid-full.svg"
+          alt="Menu Bars"
+        />
+      </button>
+
+      <img
+        loading="eager"
+        class="sr-logo"
+        src="imgs/Slogo_white.svg"
+        alt="SR Logo"
+      />
+
+      <!-- <ul class="list" id="nav-list">
         <img class="sr-logo" src="imgs/Slogo_white.svg" alt="SR Logo" />
 
         <li class="nav-item"><a id="home-link" href="#">Home</a></li>
@@ -24,7 +40,7 @@
         <li class="nav-item">
           <a id="download-resume-link" href="#">Download Resume</a>
         </li>
-      </ul>
+      </ul> -->
     </nav>
     <div id="page-format-container">
       <!-- *INTRODUCTION SECTION -->
@@ -33,8 +49,9 @@
           <div class="portrait-and-nameplate-container">
             <div id="portrait-container">
               <img
+                loading="eager"
                 class="portrait-img"
-                src="imgs/Headshot_AI.png"
+                src="imgs/Headshot_AI_reduced_size.webp"
                 alt="Headshot of Myself"
               />
             </div>
@@ -73,6 +90,7 @@
 
         <div class="work-experience-grid">
           <img
+            loading="lazy"
             class="experience-img align-right"
             id="gl-logo"
             src="imgs/globallogicsquare.png"
@@ -86,6 +104,7 @@
           </div>
 
           <img
+            loading="lazy"
             class="experience-img align-right"
             id="sju-logo"
             src="imgs/stjohnsprofileHD.webp"
@@ -106,6 +125,7 @@
         <ul class="list tech-list">
           <li class="technology">
             <img
+              loading="lazy"
               class="tech-imgs"
               id="python-logo"
               src="imgs/python-brands-solid-full.svg"
@@ -114,6 +134,7 @@
           </li>
           <li class="technology">
             <img
+              loading="lazy"
               class="tech-imgs"
               id="java-logo"
               src="imgs/java-brands-solid-full.svg"
@@ -122,6 +143,7 @@
           </li>
           <li class="technology">
             <img
+              loading="lazy"
               class="tech-imgs"
               id="javascript-logo"
               src="imgs/square-js-brands-solid-full.svg"
@@ -130,6 +152,7 @@
           </li>
           <li class="technology">
             <img
+              loading="lazy"
               class="tech-imgs"
               id="mysql-logo"
               src="imgs/mysql.svg"
@@ -138,7 +161,8 @@
           </li>
           <li class="technology">
             <img
-              class="tech-imgs"
+              loading="lazy"
+              class="tech-imgs simple-icons"
               id="fastapi-logo"
               src="imgs/fastapi.svg"
               alt="FastAPI Logo"
@@ -146,7 +170,8 @@
           </li>
           <li class="technology">
             <img
-              class="tech-imgs"
+              loading="lazy"
+              class="tech-imgs simple-icons"
               id="flask-logo"
               src="imgs/flask.svg"
               alt="Flask Logo"
@@ -154,6 +179,16 @@
           </li>
           <li class="technology">
             <img
+              loading="lazy"
+              class="tech-imgs simple-icons"
+              id="langchain-logo"
+              src="imgs/langchain.svg"
+              alt="LangChain Logo"
+            />LangChain
+          </li>
+          <li class="technology">
+            <img
+              loading="lazy"
               class="tech-imgs"
               id="html-logo"
               src="imgs/html5-brands-solid-full.svg"
@@ -162,6 +197,7 @@
           </li>
           <li class="technology">
             <img
+              loading="lazy"
               class="tech-imgs"
               id="css-logo"
               src="imgs/css-brands-solid-full.svg"
@@ -170,6 +206,7 @@
           </li>
           <li class="technology">
             <img
+              loading="lazy"
               class="tech-imgs"
               id="aws-logo"
               src="imgs/aws-brands-solid-full.svg"
@@ -178,6 +215,7 @@
           </li>
           <li class="technology">
             <img
+              loading="lazy"
               class="tech-imgs"
               id="git-logo"
               src="imgs/git-alt-brands-solid-full.svg"
@@ -186,6 +224,7 @@
           </li>
           <li class="technology">
             <img
+              loading="lazy"
               class="tech-imgs"
               id="github-logo"
               src="imgs/github-brands-solid-full.svg"
@@ -194,6 +233,7 @@
           </li>
           <li class="technology">
             <img
+              loading="lazy"
               class="tech-imgs"
               id="raspberry-pi-logo"
               src="imgs/raspberry-pi-brands-solid-full.svg"
@@ -209,6 +249,7 @@
 
         <div class="education-grid">
           <img
+            loading="lazy"
             class="education-img align-right"
             id="masters-img"
             src="imgs/stjohnsprofileHD.webp"
@@ -222,6 +263,7 @@
           </div>
 
           <img
+            loading="lazy"
             class="education-img align-right"
             id="bachelors-img"
             src="imgs/stjohnsprofileHD.webp"
