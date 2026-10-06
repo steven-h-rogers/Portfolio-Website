@@ -299,7 +299,7 @@ nav {
 
 .work-experience-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 2fr 2fr 1fr;
+  grid-template-columns: 2fr 1fr minmax(0, 2fr) 2fr 1fr;
   grid-template-rows: 1fr 1fr;
   width: 100%;
   height: 100%;
@@ -309,12 +309,6 @@ nav {
 
 .align-right {
   justify-self: right;
-}
-
-.job-entry {
-  display: flex;
-  align-items: center;
-  width: fit-content;
 }
 
 .experience-img {
@@ -348,9 +342,13 @@ nav {
 }
 
 .dash {
+  /* font-size: 0; */
+  /* line-height: 0; */
   background-color: none;
   height: 0.1rem;
   border-bottom: 0.15em dotted #cad9e3;
+  width: 100%;
+  min-width: 0;
 }
 
 #gl-dash.dash {
@@ -452,7 +450,7 @@ nav {
 
 .education-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 2fr 2fr 1fr;
+  grid-template-columns: 2fr 1fr minmax(0, 2fr) 2fr 1fr;
   grid-template-rows: 1fr 1fr;
   width: 100%;
   height: 100%;
@@ -470,25 +468,34 @@ nav {
   color: #d6bb63;
 }
 
+.education-dash {
+  flex-shrink: 1;
+  border-color: #b89fc2;
+}
+
 .education-header {
   font-size: 1.5rem;
 }
 
 .education-degree {
   font-size: 1.25rem;
+  margin-top: 0.25rem;
   color: #c58bd5;
 }
 
 .education-date {
   font-size: 1rem;
+  margin-top: 0.5rem;
   color: #bdb4aa;
 }
 
 #magna {
   color: #7fb5a4;
+  margin-top: 0.5rem;
 }
 
 #minor {
+  margin-top: 0.5rem;
   color: #c8b2d5;
 }
 
