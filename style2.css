@@ -8,6 +8,7 @@
 body {
   background-color: #152816;
   font-weight: bold;
+  min-width: none;
 }
 
 section {
@@ -324,7 +325,7 @@ nav {
   grid-template-columns:
     minmax(0, 2fr) 1fr minmax(0, 2fr) 2fr
     minmax(0, 1fr);
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
   max-width: 100%;
   max-height: 100%;
   align-items: center;
@@ -336,7 +337,7 @@ nav {
 }
 
 .experience-img {
-  max-width: 7rem;
+  max-width: 5rem;
   min-width: none;
   aspect-ratio: 1/1;
 }
@@ -410,6 +411,7 @@ nav {
 .tech-stack {
   background-color: #042128;
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
@@ -421,7 +423,7 @@ nav {
 
 .tech-imgs {
   aspect-ratio: 1/1;
-  max-width: 5vw;
+  max-width: 10vw;
   margin-right: 1rem;
 }
 
@@ -436,13 +438,15 @@ nav {
 }
 
 .tech-list {
+  margin-top: 7%;
+  margin-bottom: 7%;
   display: flex;
   justify-content: center;
   align-content: center;
-  gap: 1rem;
+  gap: 2.5rem;
   flex-grow: 1;
   flex-wrap: wrap;
-  max-height: 50vh;
+  max-height: 100%;
   font-size: 1.5rem;
 
   color: #c8b599;
@@ -485,7 +489,7 @@ nav {
 }
 
 .education-img {
-  max-width: 7rem;
+  max-width: 5rem;
   min-width: none;
   aspect-ratio: 1/1;
 }
@@ -558,7 +562,11 @@ nav {
 /* Contact Styling */
 
 .contact {
-  background-color: #3c1d0c;
+  background-color: #491405;
+}
+
+#contact-title {
+  color: #ec7bb7;
 }
 
 @media {
