@@ -117,6 +117,7 @@ nav {
 
 .bars-button:hover .bars {
   background-color: purple;
+  cursor: pointer;
 }
 
 #nav-list {
@@ -576,24 +577,32 @@ nav {
 
 .contact-form-container {
   padding: 10%;
-  background-color: #47867f;
+  background-color: #74a59f;
 }
 
 .contact-info-container {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   min-height: 100%;
   padding: 10%;
-  background-color: #cb512f;
+  background-color: #c5431f;
 }
 
 .contact-group {
   display: flex;
+  align-items: center;
+  gap: 0.75rem;
   flex-shrink: 1;
+  margin-right: 1.25rem;
 }
 
 .contact-img {
   width: 5vw;
+}
+
+.contact-link {
+  color: #e4e09d;
 }
 
 @media {
