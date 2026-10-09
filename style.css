@@ -609,6 +609,8 @@ nav {
 .form-group input {
   border-radius: 1rem;
   border: none;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   background-color: #ddf4f1;
   color: #0e443b;
 }
