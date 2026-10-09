@@ -1,30 +1,28 @@
 const formElement = document.getElementById("contact-form");
 
-const lambdaBaseURL =
-  "https://m53gxsh46yvr67igvtwnwbcfz40netas.lambda-url.us-east-2.on.aws/";
+const apiGatewayURL =
+  "https://2j1szjlq17.execute-api.us-east-2.amazonaws.com/send";
 
 formElement.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const name = document.querySelector("#name-input").value;
-  const email = document.querySelector("#email-input").value;
-  const message = document.querySelector("#message-input").value;
+  const formData = {
+    name: document.querySelector("#name-input").value,
+    email: document.querySelector("#email-input").value,
+    message: document.querySelector("#message-input").value,
+  };
 
-  console.log(name, email, message);
+  console.log(formData);
 
-  const payload = new URLSearchParams({
-    name: name,
-    email: email,
-    message: message,
-  });
-  hitLambda(payload);
+  hitLambda(formData);
 });
 
-async function hitLambda(payload) {
+async function hitLambda(formData) {
   try {
-    const response = await fetch(`${lambdaBaseURL}?${payload.toString()}`, {
+    const response = await fetch(`${apiGatewayURL}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
     });
 
     const data = await response.json();

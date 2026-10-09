@@ -285,7 +285,7 @@
       <!-- list github, linkedIn, email, phone number
         create a lambda function that emails me using ses and cloudflare email routing
         where people can email me messages from portfolio -->
-      <footer class="quarter-section">
+      <footer class="half-section">
         <!-- add a form here that's linked to lambda -->
         <section class="contact half-section">
           <h2 class="section-title" id="contact-title">Contact me</h2>
@@ -295,17 +295,17 @@
             <form id="contact-form">
               <div class="name-group">
                 <label for="name">Name:</label>
-                <input type="text" id="name-input" name="name" />
+                <input type="text" id="name-input" name="name" required />
               </div>
 
               <div class="email-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email-input" name="email" />
+                <input type="email" id="email-input" name="email" required />
               </div>
 
               <div class="message-group">
                 <label for="message">Message:</label>
-                <input type="text" id="message-input" name="message" />
+                <input type="text" id="message-input" name="message" required />
               </div>
 
               <button class="form-submit-button" type="submit">Submit</button>
