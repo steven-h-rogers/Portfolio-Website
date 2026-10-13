@@ -42,7 +42,8 @@ img {
 }
 
 .section-title {
-  font-size: 2em;
+  font-size: clamp(2rem, 5vw, 2.5rem);
+
   font-weight: 900;
   /* justify-content: center; */
 }
@@ -57,7 +58,7 @@ img {
 #page-format-container {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10vh;
+  margin-top: 10dvh;
   display: grid;
   min-width: none;
   grid-template-columns: minmax(300px, 1fr);
@@ -227,6 +228,8 @@ nav {
 .personal-info {
   position: relative;
   display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
   justify-content: center;
   align-items: center;
   /* min-width: none; */
@@ -234,15 +237,16 @@ nav {
   max-height: 25%;
   background-color: #1b2c1c99;
   padding: 3% 5%;
-  flex-shrink: 1;
   /* z-index: 1; */
 }
 
 .nameplate {
+  /* min-height: 100%;
+  min-width: 100%; */
 }
 
 #name-text {
-  font-size: clamp(none, 2rem, 4rem);
+  font-size: clamp(1.75rem, 8vw, 3rem);
   /* text-wrap: nowrap; */
   color: #f7fcff;
   left: 0;
@@ -251,7 +255,7 @@ nav {
 
 #title-text {
   /* display: inline; */
-  font-size: clamp(none, 1.5rem, 2rem);
+  font-size: clamp(1.25rem, 5vw, 2rem);
   /* text-wrap: nowrap; */
   margin-top: 2%;
   color: #f0b971;
@@ -259,7 +263,7 @@ nav {
 
 #location-text {
   /* text-wrap: nowrap; */
-  font-size: clamp(none, 1.25rem, 1.5rem);
+  font-size: clamp(1rem, 4.75vw, 1.75rem);
   margin-top: 3%;
   color: #8bdbc3;
 }
@@ -274,7 +278,7 @@ nav {
 }
 
 #about {
-  scroll-margin-top: 10vh;
+  scroll-margin-top: 10dvh;
 }
 
 #about-title {
@@ -289,7 +293,7 @@ nav {
   text-align: center;
   color: #c9bbaa;
   /* background-color: #042128; */
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
   max-height: 100%;
 }
 
@@ -389,18 +393,18 @@ nav {
 
 .job-header {
   /* text-wrap: nowrap; */
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
 .job-title {
   /* text-wrap: nowrap; */
-  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
   color: #f0b971;
   margin-top: 0.25rem;
 }
 
 .job-details .date {
-  font-size: 1rem;
+  font-size: clamp(1rem, 1.75vw, 1.25rem);
   /* text-wrap: nowrap; */
   margin-top: 0.5rem;
   color: #cad9e3;
@@ -424,7 +428,7 @@ nav {
 
 .tech-imgs {
   aspect-ratio: 1/1;
-  max-width: 10vw;
+  max-width: 6vw;
   margin-right: 1rem;
   object-fit: contain;
 }
@@ -439,27 +443,35 @@ nav {
   padding: 4%;
 }
 
+/* !fix size bugs here */
+
 .tech-list {
-  margin-top: 7%;
-  margin-bottom: 7%;
   display: flex;
   justify-content: center;
   align-content: center;
-  gap: 2.5rem;
-  flex-grow: 1;
   flex-wrap: wrap;
-  max-height: 100%;
+  /* flex-grow: 1; */
+  /* flex-shrink: 0; */
+
+  margin-top: 7%;
+  margin-bottom: 7%;
+  gap: 2.5rem;
+  min-height: 100%;
   font-size: 1.5rem;
   color: #c8b599;
 }
 
 .technology {
   display: flex;
+  /* flex-grow: 1; */
+  flex-shrink: 0;
   justify-content: space-around;
   align-items: center;
   /* gap: 1rem; */
   margin-right: 1.5rem;
   font-weight: bold;
+
+  white-space: nowrap;
 }
 
 /* Education Styling */
