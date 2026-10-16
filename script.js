@@ -1,5 +1,6 @@
 const formElement = document.querySelector("#contact-form");
 const navbarBars = document.querySelector(".bars-button");
+const pageContainer = document.querySelector("#page-format-container");
 
 const apiGatewayURL =
   "https://2j1szjlq17.execute-api.us-east-2.amazonaws.com/send";
@@ -50,3 +51,20 @@ function changeNavButtonState() {
     navbarBars.classList.add("show-nav");
   }
 }
+
+const verticalNavHTML = `      
+      <ul class="vertical-nav list" id="mobile-nav-list">
+        <li class="nav-item"><a id="home-link" href="#">Home</a></li>
+        <li class="nav-item">
+          <a id="about-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a id="projects-link" href="#">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a id="contact-link" href="#">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a id="download-resume-link" href="#">Download Resume</a>
+        </li>
+      </ul>`;
