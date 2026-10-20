@@ -454,11 +454,11 @@ nav {
 .tech-stack {
   background-color: #042128;
   display: flex;
-  min-height: 100%;
-  flex-grow: 1;
   flex-direction: column;
+  flex-grow: 1;
+  min-height: 100%;
   align-items: center;
-  justify-content: space-around;
+  /* justify-content: space-around; */
 }
 
 #tech-stack-title {
@@ -486,16 +486,19 @@ nav {
 
 .tech-list {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  /* flex-grow: 1; */
+  flex-grow: 1;
+  padding: 3%;
   /* flex-shrink: 0; */
 
-  margin-top: 7%;
-  margin-bottom: 7%;
-  gap: 2.5rem;
-  min-height: 100%;
+  /* margin-top: 7%;
+  margin-bottom: 7%; */
+  gap: clamp(2.5rem, 3dvw, 5dvw);
+  row-gap: clamp(1rem, 3dvh, 5dvh);
+  /* min-height: 100%; */
   font-size: clamp(1.5rem, 2dvw, 2.5rem);
   color: #c8b599;
 }
@@ -504,14 +507,14 @@ nav {
   display: flex;
   /* flex-grow: 1; */
   flex-shrink: 0;
-  flex-grow: 1;
-  justify-content: space-around;
+  /* flex-grow: 1; */
+  /* justify-content: space-around; */
   align-items: center;
   /* gap: 1rem; */
   margin-right: 1.5rem;
   font-weight: bold;
-  width: fit-content;
-  white-space: nowrap;
+  /* width: fit-content; */
+  /* white-space: nowrap; */
 }
 
 /* Education Styling */
