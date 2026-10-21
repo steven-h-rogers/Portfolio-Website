@@ -2,10 +2,13 @@ const formElement = document.querySelector("#contact-form");
 const navbarBars = document.querySelector(".bars-button");
 const pageContainer = document.querySelector("#page-format-container");
 const verticalNav = document.querySelector(".vertical-nav");
+const messageInput = document.querySelector("#message-input");
+const navlistElements = document.querySelectorAll(".nav-link");
 
 const apiGatewayURL =
   "https://2j1szjlq17.execute-api.us-east-2.amazonaws.com/send";
 
+// Send info to lambda upon submission
 formElement.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -20,6 +23,7 @@ formElement.addEventListener("submit", (event) => {
   hitLambda(formData);
 });
 
+// hit the lambda endpoint with the form data
 async function hitLambda(formData) {
   try {
     const response = await fetch(`${apiGatewayURL}`, {
@@ -35,6 +39,7 @@ async function hitLambda(formData) {
   }
 }
 
+// toggle mobile navbar
 navbarBars.addEventListener("click", () => {
   changeVerticalNavState();
 });
@@ -47,3 +52,10 @@ function changeVerticalNavState() {
   }
   return verticalNav.style.display;
 }
+
+// add click event listener to navbar elements that links to changeVerticalNavState
+navlistElements.forEach((element) => {
+  element.addEventListener("click", () => {
+    changeVerticalNavState();
+  });
+});

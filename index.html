@@ -25,21 +25,31 @@
         alt="SR Logo"
       />
       <div class="vertical-nav">
-        <ul class="list" id="mobile-nav-list">
-          <li class="nav-item"><a id="home-link" href="#">Home</a></li>
-          <li class="nav-item">
-            <a id="about-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a id="projects-link" href="#">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a id="contact-link" href="#contact">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a id="download-resume-link" href="#">Download Resume</a>
-          </li>
-        </ul>
+        <div class="nav-format-container">
+          <ul class="list" id="mobile-nav-list">
+            <li class="nav-item">
+              <a class="nav-link" id="home-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="about-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="projects-link" href="#">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="contact-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="download-resume-link"
+                href="resume/StevenRogers_Resume_10-05-2026.pdf"
+                download
+                >Download Resume</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
     <div id="page-format-container">
@@ -122,7 +132,6 @@
       </section>
 
       <!-- *TECH STACK SECTION -->
-      <!-- !fix sizing bugs here -->
       <section class="tech-stack half-section" id="tech-stack">
         <h2 class="section-title" id="tech-stack-title">Tech Stack</h2>
         <ul class="list tech-list">
@@ -246,7 +255,6 @@
             />
             <span class="tech-stack-text"> Github </span>
           </li>
-          <!-- !make the text-content of the technology classes have their own wrapper to avoid weird sizing issues -->
           <li class="technology">
             <img
               loading="lazy"
@@ -263,7 +271,7 @@
       <!-- *EDUCATION SECTION -->
       <section class="education half-section" id="education">
         <h2 class="section-title" id="education-title">Education</h2>
-
+        <!-- ! Consider making this a 3x2 grid that is centered horizontally on the page using margin auto -->
         <div class="education-grid">
           <img
             loading="lazy"
@@ -296,10 +304,8 @@
           </div>
         </div>
       </section>
-      <!-- !need a contact section -->
-      <!-- list github, linkedIn, email, phone number
-        create a lambda function that emails me using ses and cloudflare email routing
-        where people can email me messages from portfolio -->
+
+      <!-- *CONTACT SECTION -->
       <footer class="half-section">
         <!-- add a form here that's linked to lambda -->
         <section class="contact half-section" id="contact">
@@ -309,17 +315,29 @@
             <!-- contact form -->
             <form id="contact-form">
               <div class="name-group form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name-input" name="name" required />
+                <label for="name-input">Name:</label>
+                <input
+                  type="text"
+                  id="name-input"
+                  name="name"
+                  autocomplete="name"
+                  required
+                />
               </div>
 
               <div class="email-group form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email-input" name="email" required />
+                <label for="email-input">Email:</label>
+                <input
+                  type="email"
+                  id="email-input"
+                  name="email"
+                  autocomplete="email"
+                  required
+                />
               </div>
 
               <div class="message-group form-group">
-                <label for="message">Message:</label>
+                <label for="message-input">Message:</label>
                 <input type="text" id="message-input" name="message" required />
               </div>
 
