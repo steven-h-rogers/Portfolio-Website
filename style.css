@@ -467,9 +467,15 @@ nav {
 
 .tech-imgs {
   aspect-ratio: 1/1;
+  min-width: 40px;
+  width: 100px;
   max-width: 6vw;
   margin-right: 1rem;
-  object-fit: contain;
+  /* object-fit: contain; */
+}
+
+.tech-stack-text {
+  /* display: inline-block; */
 }
 
 .black-logo {
@@ -490,7 +496,7 @@ nav {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  flex-grow: 1;
+  /* flex-grow: 1; */
   padding: 3%;
   /* flex-shrink: 0; */
 
@@ -505,8 +511,9 @@ nav {
 
 .technology {
   display: flex;
+  flex-direction: row;
   /* flex-grow: 1; */
-  flex-shrink: 0;
+  /* flex-shrink: 0; */
   /* flex-grow: 1; */
   /* justify-content: space-around; */
   align-items: center;
