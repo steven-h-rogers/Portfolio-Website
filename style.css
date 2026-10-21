@@ -466,10 +466,12 @@ nav {
 }
 
 .tech-imgs {
+  height: auto;
   aspect-ratio: 1/1;
-  min-width: 40px;
+  /* min-width: 40px;
   width: 100px;
-  max-width: 6vw;
+  max-width: 150px; */
+  width: clamp(40px, 6vw, 110px);
   margin-right: 1rem;
   /* object-fit: contain; */
 }
@@ -505,7 +507,7 @@ nav {
   gap: clamp(2.5rem, 3dvw, 5dvw);
   row-gap: clamp(1rem, 3dvh, 5dvh);
   /* min-height: 100%; */
-  font-size: clamp(1.5rem, 2dvw, 2.5rem);
+  font-size: clamp(1.5rem, 2dvw, 2rem);
   color: #c8b599;
 }
 
