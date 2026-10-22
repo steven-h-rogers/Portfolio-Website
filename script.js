@@ -1,5 +1,6 @@
 const formElement = document.querySelector("#contact-form");
 const navbarBars = document.querySelector(".bars-button");
+const navbarImg = document.querySelector("#bars-img");
 const pageContainer = document.querySelector("#page-format-container");
 const verticalNav = document.querySelector(".vertical-nav");
 const messageInput = document.querySelector("#message-input");
@@ -47,8 +48,10 @@ navbarBars.addEventListener("click", () => {
 function changeVerticalNavState() {
   if (verticalNav.style.display == "none") {
     verticalNav.style.display = "flex";
+    navbarImg.src = "imgs/ui_symbols/x-solid-full.svg";
   } else {
     verticalNav.style.display = "none";
+    navbarImg.src = "imgs/ui_symbols/bars-solid-full.svg";
   }
   return verticalNav.style.display;
 }
