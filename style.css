@@ -707,8 +707,6 @@ nav {
   overflow-y: hidden;
   width: 100%;
   min-height: 50px;
-  max-height: 50%;
-  field-sizing: content;
 }
 
 .form-submit-button {

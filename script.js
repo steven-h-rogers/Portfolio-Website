@@ -10,6 +10,7 @@ const apiGatewayURL =
   "https://2j1szjlq17.execute-api.us-east-2.amazonaws.com/send";
 
 // Send info to lambda upon submission
+//! add clear on successful submissionks
 formElement.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -61,4 +62,9 @@ navlistElements.forEach((element) => {
   element.addEventListener("click", () => {
     changeVerticalNavState();
   });
+});
+
+messageInput.addEventListener("input", function () {
+  this.style.height = "auto";
+  this.style.height = this.scrollHeight + "px";
 });
