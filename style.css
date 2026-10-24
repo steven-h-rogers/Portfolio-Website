@@ -686,23 +686,29 @@ nav {
   margin-bottom: 0.25rem;
 }
 
-.form-group input {
+.form-group input,
+.form-group textarea {
   font-size: clamp(1rem, 3vw, 1.25rem);
   height: clamp(1.5rem, 3vh, 2rem);
   border-radius: 1rem;
   border: none;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding: 0.5rem;
   background-color: #ddf4f1;
   color: #0e443b;
 }
 
+.form-group textarea {
+}
+
 #message-input {
   resize: none;
-  overflow: hidden;
-  word-wrap: break-word;
+  /* overflow: hidden; */
+  /* word-wrap: break-word; */
+  overflow-y: hidden;
   width: 100%;
   min-height: 50px;
+  max-height: 50%;
+  field-sizing: content;
 }
 
 .form-submit-button {
