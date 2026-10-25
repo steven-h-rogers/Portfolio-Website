@@ -698,6 +698,7 @@ nav {
 }
 
 .form-group textarea {
+  /* min-height: 2rem; */
 }
 
 #message-input {
@@ -706,7 +707,7 @@ nav {
   /* word-wrap: break-word; */
   overflow-y: hidden;
   width: 100%;
-  min-height: 50px;
+  min-height: 3.5rem;
 }
 
 .form-submit-button {

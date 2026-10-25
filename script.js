@@ -23,6 +23,9 @@ formElement.addEventListener("submit", (event) => {
     message: messageInput.value,
   };
 
+  nameInput.value = "";
+  emailInput.value = "";
+  messageInput.value = "";
   console.log(formData);
 
   hitLambda(formData);
@@ -42,9 +45,6 @@ async function hitLambda(formData) {
     // there's probably a better way to do this but it makes sure that it only clears if it hits successfully
     // consider a more fleshed out response packet from the lambda function
     // also, figure out a more robust rate limiting where duplicate messages can't be sent
-    nameInput.value = "";
-    emailInput.value = "";
-    messageInput.value = "";
   } catch (error) {
     console.error("error hitting lambda", error);
   }
