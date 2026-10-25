@@ -9,6 +9,8 @@ const messageInput = document.querySelector("#message-input");
 
 const navlistElements = document.querySelectorAll(".nav-link");
 
+const wideScreenMediaQuery = window.matchMedia("(width >= 700px)");
+
 const apiGatewayURL =
   "https://2j1szjlq17.execute-api.us-east-2.amazonaws.com/send";
 
@@ -81,3 +83,12 @@ messageInput.addEventListener("input", function () {
   this.style.height = "auto";
   this.style.height = this.scrollHeight + "px";
 });
+
+function keepNavbarOnWideScreen(e) {
+  if (e.matches) {
+    verticalNav.style.display = "flex";
+    console.log("change detected");
+  }
+}
+
+wideScreenMediaQuery.addEventListener("change", keepNavbarOnWideScreen);
