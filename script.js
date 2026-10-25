@@ -52,18 +52,22 @@ async function hitLambda(formData) {
 
 // toggle mobile navbar
 navbarBars.addEventListener("click", () => {
-  changeVerticalNavState();
+  if (window.innerWidth < 700) {
+    changeVerticalNavState();
+  }
 });
 
 function changeVerticalNavState() {
-  if (verticalNav.style.display == "none") {
-    verticalNav.style.display = "flex";
-    navbarImg.src = "imgs/ui_symbols/x-solid-full.svg";
-  } else {
-    verticalNav.style.display = "none";
-    navbarImg.src = "imgs/ui_symbols/bars-solid-full.svg";
+  if (window.innerWidth < 700) {
+    if (verticalNav.style.display == "none") {
+      verticalNav.style.display = "flex";
+      navbarImg.src = "imgs/ui_symbols/x-solid-full.svg";
+    } else {
+      verticalNav.style.display = "none";
+      navbarImg.src = "imgs/ui_symbols/bars-solid-full.svg";
+    }
+    return verticalNav.style.display;
   }
-  return verticalNav.style.display;
 }
 
 // add click event listener to navbar elements that links to changeVerticalNavState

@@ -48,7 +48,7 @@ img {
   /* padding-top: 20dvh; */
   /* padding-bottom: 40dvh; */
   position: fixed;
-  left: 0;
+  right: 0;
   top: 0;
   margin-top: 10dvh;
   width: clamp(100px, 70vw, 70vw);
@@ -89,9 +89,8 @@ img {
 
 .section-title {
   font-size: clamp(2rem, 5vw, 2.5rem);
-
   font-weight: 900;
-  /* justify-content: center; */
+  margin-bottom: 1.5rem;
 }
 
 .hero {
@@ -106,7 +105,7 @@ img {
   margin-right: auto;
   margin-top: 10dvh;
   display: grid;
-  min-width: none;
+  min-width: 300px;
   grid-template-columns: minmax(300px, 1fr);
   grid-auto-rows: minmax(100px, auto);
 
@@ -153,7 +152,7 @@ nav {
 
 .bars-button {
   position: fixed;
-  left: 5%;
+  right: 5%;
   display: flex;
   flex-shrink: 1;
   flex-grow: 1;
@@ -648,6 +647,10 @@ nav {
   background-color: #491405;
 }
 
+#contact {
+  scroll-margin-top: 10dvh;
+}
+
 #contact-title {
   color: #ec7bb7;
   margin-left: auto;
@@ -749,7 +752,67 @@ nav {
   text-decoration: none;
 }
 
-@media {
+@media (width >= 700px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    width: 80dvw;
+  }
+
+  .vertical-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    height: 10dvh;
+    padding: 0;
+    padding-right: 3%;
+    font-size: clamp(1rem, 3dvw, 1.5rem);
+    width: clamp(300px, 65%, 80%);
+    margin-top: 0;
+    position: static;
+    background-color: transparent;
+  }
+
+  .nav-format-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 70%;
+    height: 100%;
+  }
+
+  #mobile-nav-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+  }
+
+  .nav-link {
+    height: 100%;
+  }
+
+  .nav-item {
+    margin-left: 2%;
+  }
+
+  #mobile-nav-list .nav-item a {
+    display: inline-block;
+    border-bottom: none;
+  }
+
+  .bars {
+    display: none;
+  }
+
+  .bars-button {
+    display: none;
+  }
+
+  #page-format-container {
+    width: 80dvw;
+  }
 }
 
 /* color pallette
