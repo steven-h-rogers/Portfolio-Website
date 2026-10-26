@@ -212,6 +212,14 @@ nav {
   color: #36d079;
 }
 
+#download-resume-link:hover {
+  color: #54f097;
+}
+
+#download-resume-link:active {
+  color: #ce5fec;
+}
+
 .introduction {
   display: flex;
   flex-shrink: 1;
