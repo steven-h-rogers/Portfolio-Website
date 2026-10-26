@@ -12,6 +12,7 @@ const footer = document.querySelector("footer");
 const navlistElements = document.querySelectorAll(".nav-link");
 
 const wideScreenMediaQuery = window.matchMedia("(width >= 700px)");
+const wideToNarrowMediaQuery = window.matchMedia("(width < 700px)");
 
 const apiGatewayURL =
   "https://2j1szjlq17.execute-api.us-east-2.amazonaws.com/send";
@@ -86,6 +87,17 @@ messageInput.addEventListener("input", function () {
   this.style.minHeight = "2rem";
   this.style.height = this.scrollHeight + "px";
 });
+
+function removeNavbarOnNarrowScreen(e) {
+  if (e.matches) {
+    verticalNav.style.display = "none";
+    navbarImg.src = "imgs/ui_symbols/bars-solid-full.svg";
+
+    console.log("wide to narrow detected");
+  }
+}
+
+wideToNarrowMediaQuery.addEventListener("change", removeNavbarOnNarrowScreen);
 
 function keepNavbarOnWideScreen(e) {
   if (e.matches) {
