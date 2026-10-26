@@ -6,6 +6,8 @@ const verticalNav = document.querySelector(".vertical-nav");
 const nameInput = document.querySelector("#name-input");
 const emailInput = document.querySelector("#email-input");
 const messageInput = document.querySelector("#message-input");
+const contactSection = document.querySelector("#contact");
+const footer = document.querySelector("footer");
 
 const navlistElements = document.querySelectorAll(".nav-link");
 
@@ -81,6 +83,7 @@ navlistElements.forEach((element) => {
 
 messageInput.addEventListener("input", function () {
   this.style.height = "auto";
+  this.style.minHeight = "2rem";
   this.style.height = this.scrollHeight + "px";
 });
 
@@ -92,3 +95,14 @@ function keepNavbarOnWideScreen(e) {
 }
 
 wideScreenMediaQuery.addEventListener("change", keepNavbarOnWideScreen);
+
+function setCopyright() {
+  const currentYear = new Date().getFullYear();
+  const copyright = document.createElement("p");
+  copyright.classList.add("copyright");
+  copyright.textContent = `\u00A9 ${currentYear} Steven Rogers. All rights reserved.`;
+
+  contactSection.appendChild(copyright);
+}
+
+setCopyright();

@@ -36,6 +36,17 @@ img {
   user-select: none;
 }
 
+.copyright {
+  margin-top: 2.5%;
+  font-size: 1rem;
+  justify-self: end;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #b4a789;
+}
+
 .vertical-nav {
   display: none;
   /* display: flex; uncomment for debugging*/
@@ -483,7 +494,7 @@ nav {
   /* min-width: 40px;
   width: 100px;
   max-width: 150px; */
-  width: clamp(40px, 6vw, 110px);
+  width: clamp(40px, 5vw, 110px);
   margin-right: 1rem;
   /* object-fit: contain; */
 }
@@ -648,6 +659,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  padding-bottom: 0;
   background-color: #491405;
 }
 
@@ -673,7 +685,7 @@ nav {
   /* gap: 5%; */
   padding: 5%;
   background-color: #74a59f;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
 #contact-form {
@@ -829,6 +841,10 @@ nav {
 
   #page-format-container {
     width: 80dvw;
+  }
+
+  #message-input {
+    height: 4rem;
   }
 }
 
