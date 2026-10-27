@@ -858,6 +858,10 @@ nav {
     font-size: clamp(1rem, 2.5dvw, 1.5rem);
   }
 
+  #mobile-nav-list .nav-item a {
+    min-height: 0;
+  }
+
   .bars {
     display: none;
   }
