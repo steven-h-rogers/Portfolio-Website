@@ -64,7 +64,7 @@ navbarBars.addEventListener("click", () => {
 
 function changeVerticalNavState() {
   if (window.innerWidth < 700) {
-    if (verticalNav.style.display == "none") {
+    if (verticalNav.style.display !== "flex") {
       verticalNav.style.display = "flex";
       navbarImg.src = "imgs/ui_symbols/x-solid-full.svg";
     } else {
@@ -78,7 +78,9 @@ function changeVerticalNavState() {
 // add click event listener to navbar elements that links to changeVerticalNavState
 navlistElements.forEach((element) => {
   element.addEventListener("click", () => {
-    changeVerticalNavState();
+    setTimeout(() => {
+      changeVerticalNavState();
+    }, 100);
   });
 });
 

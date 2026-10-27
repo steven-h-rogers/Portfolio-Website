@@ -1,9 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- ?consider preloading images that are in the initial viewport -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+
     <title>Steven Rogers Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link
@@ -15,6 +20,12 @@
   </head>
   <body>
     <nav>
+      <img
+        loading="eager"
+        class="sr-logo"
+        src="imgs/personal_imgs/Slogo_white.svg"
+        alt="SR Logo"
+      />
       <button class="bars-button">
         <img
           loading="eager"
@@ -25,12 +36,6 @@
         />
       </button>
 
-      <img
-        loading="eager"
-        class="sr-logo"
-        src="imgs/personal_imgs/Slogo_white.svg"
-        alt="SR Logo"
-      />
       <div class="vertical-nav">
         <div class="nav-format-container">
           <ul class="list" id="mobile-nav-list">
@@ -41,9 +46,9 @@
               <a class="nav-link" id="about-link" href="#about">About</a>
             </li>
             <!-- bring back once the section is complete -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" id="projects-link" href="#">Projects</a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link" id="contact-link" href="#contact">Contact</a>
             </li>

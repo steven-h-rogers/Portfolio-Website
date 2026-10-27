@@ -62,7 +62,7 @@ img {
   right: 0;
   top: 0;
   margin-top: 10dvh;
-  width: clamp(100px, 70vw, 70vw);
+  width: clamp(100px, 70dvw, 70dvw);
   height: 90vh;
   background-color: #061807;
   z-index: 10000;
@@ -89,6 +89,7 @@ img {
 #mobile-nav-list .nav-item a {
   min-width: 100%;
   width: 100px;
+  min-height: 55px;
   display: block;
   border-bottom: solid 2px #0e443b;
 }
@@ -152,30 +153,48 @@ nav {
 .sr-logo {
   display: flex;
   flex-shrink: 1;
+  /* justify-self: center; */
   /* flex-grow: 1; */
   /* aspect-ratio: 1/1; */
   pointer-events: all;
   max-height: 7dvh;
 }
 
-.bars {
+.bars-button img {
+  pointer-events: auto;
+}
+
+#bars-img {
+  height: 70%;
+  width: 70%;
 }
 
 .bars-button {
-  position: fixed;
-  right: 5%;
+  position: absolute;
+  /* margin-left: auto; */
+  right: 15svw;
+  justify-content: center;
+  align-items: center;
   display: flex;
   flex-shrink: 1;
-  flex-grow: 1;
-  height: 5dvh;
+  flex-grow: 0;
+  width: 66px;
+  height: 66px;
   background: none;
   border: none;
+  z-index: 20000;
+  pointer-events: auto;
+
+  cursor: pointer;
+
+  touch-action: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.bars-button:hover .bars {
+/* .bars-button:hover .bars {
   background-color: purple;
   cursor: pointer;
-}
+} */
 
 #nav-list {
   display: flex;
@@ -789,7 +808,7 @@ nav {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    width: 80dvw;
+    width: 65dvw;
   }
 
   .vertical-nav {
@@ -848,7 +867,7 @@ nav {
   }
 
   #page-format-container {
-    width: 80dvw;
+    width: 65dvw;
   }
 
   #message-input {
