@@ -172,7 +172,7 @@ nav {
 .bars-button {
   position: absolute;
   /* margin-left: auto; */
-  right: 15svw;
+  right: 5svw;
   justify-content: center;
   align-items: center;
   display: flex;
